@@ -1,5 +1,6 @@
 var express = require('express');
 var _ = require('underscore');
+var low = require('lowdb');
 
 var utils = require('./utils')
 
@@ -7,10 +8,82 @@ module.exports = function (source) {
     //http://expressjs.com/api.html#router
     var router = express.Router();
 
-    var db = low(source);
     if (_.isObject(source)) {
-        db = low();
+        var db = low();
         db.object = source;
+    } else {
+        var db = low(source);
+    }
+
+
+    function list (req, res, next) {
+        var filters = {};
+        var array;
+
+        var _start = req.query._start;
+        var _end = req.query._end;
+        var _sort = req.query._sort;
+        var _order = req.query._order;
+
+        delete req.query._start;
+        delete req.query._end;
+        delete req.query._sort;
+        delete req.query._order;
+
+        if (req.query.q) {
+            var q = req.query.q.toLowerCase();
+
+            array = db(req.params.resource).filter(function (obj) {
+                for (var key in obj) {
+                    var value = obj[key];
+                    //indexOf q
+                    if (_.isString(value) && value.toLowerCase().indexOf(q) !== -1) {
+                        return true;
+                    }
+                }
+            });
+
+        } else {
+
+            for (var key in req.query) {
+                //TODO
+                if (key !== 'callback' && key !== '_') {
+                    filters[key] = utils.toNative(req.query[key]);
+                }
+            }
+
+            if (_(filters).isEmpty()) {
+                array = db(req.params.resource).value();
+            } else {
+                array = db(req.params.resource).filter(filters);
+            }
+
+        }
+
+        //TODO Sort
+        if (_sort) {
+            _order = _order || 'ASC';
+
+            array = _.sortBy(array, function(element) {
+                return element[_sort];
+            });
+
+            if (_order === 'DESC') {
+                array.reverse();
+            }
+        }
+
+        //TODO 分页
+        if (_end) {
+            _start = _start || 0;
+            res.setHeader('X-Total-Count', array.length);
+            res.setHeader('Access-Control-Expose-Headers', 'X-Total-Count');
+        
+            array = array.slice(_start, _end);
+        }
+
+        res.jsonp(array);
+
     }
 
     // GET /:resource/:id
@@ -80,7 +153,7 @@ module.exports = function (source) {
           .get(list)
           .post(create);
 
-    router.router('/:resource/:id')
+    router.route('/:resource/:id')
           .get(show)
           .put(update)
           .patch(update)
