@@ -159,6 +159,6 @@ module.exports = function (source) {
           .patch(update)
           .delete(destory)
 
-
+    return router;
 
 };
