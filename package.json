@@ -1,0 +1,31 @@
+{
+  "name": "yc-jserver",
+  "version": "0.1.0",
+  "description": "json server for yc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yc-team/yc-jserver.git"
+  },
+  "dependencies": {
+    "commander": "1.3.2",
+    "body-parser": "1.12.0",
+    "cors": "2.5.3",
+    "express": "4.12.2",
+    "lowdb": "0.7.2"
+  },
+  "keywords": [
+    "yc",
+    "tool",
+    "json",
+    "server"
+  ],
+  "author": "zhangyaochun",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/yc-team/yc-jserver/issues"
+  }
+}
