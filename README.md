@@ -6,6 +6,7 @@ json server for yc
 * 使用最新的 Express 4.*
 * 默认开启 cors
 * 服务支持 RESTFul api， 除了get 外，还支持 post、put、patch、delete 
+* 所有写操作都会写入起服务时候指定的 json 文件
 * 服务 get 支持分页：?_start=0&_end=1
 * 服务 get 支持筛选过滤：?name=zhangyaochun
 * 服务自定义端口号
