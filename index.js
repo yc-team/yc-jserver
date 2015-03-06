@@ -36,17 +36,42 @@ function server(data, filepath) {
 
 module.exports = function (argv) {
 
-    program
-      .version(version)
-      .option('-p, --port', 'Set port if you want')
-      .parse(argv);
-
-    
-    if (program.port) {
-       port = program.port;
+    function setPort (val) {
+      port = val;
     }
 
-    var source = argv[2] || 'db.json';
+    program
+      .version(version)
+      .option('-p, --port <port number>', 'Set port if you want', setPort)
+      .parse(argv);
+
+
+    var source = 'db.json';
+
+    
+    /*if (program.port) {
+          console.log(argv);
+
+       //js a.json -p 5000
+       //[ 'node', '/usr/local/bin/js', 'a.json', '-p', '5000' ]
+       if (argv.length == 5 && argv[3] == '-p') {
+          port = argv[4];
+          if (/\.json$/.test(argv[2])) {
+            source = argv[2];
+          }
+       } else if (argv.length == 4 && argv[2] == '-p') {
+          //js -p 5000
+          //[ 'node', '/usr/local/bin/js', '-p', '5000' ]
+          port = argv[3];
+       }
+    }*/
+
+    //fix like: js a.json
+    if (argv.length > 2){
+        if (/\.json$/.test(argv[2])) {
+          source = argv[2];
+        }
+    }
 
     //check source is json or not
     if (/\.json$/.test(source)) {
