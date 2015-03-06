@@ -9,7 +9,7 @@ var port = 4000;  //defalt port
 function server(data, filepath) {
 
     console.log(
-      '\nWelcome brother, we give you ' + chalk.grey('a json server\n');
+      '\nWelcome brother, we give you ' + chalk.grey('a json server\n')
     )
 
     for (var prop in data) {
