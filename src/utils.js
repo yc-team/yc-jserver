@@ -4,7 +4,7 @@ function toNative (val) {
         if (val === '' || val.trim() !== val) {
             //fix 空格
             return val;
-        } else if (value === 'true' || value === 'false') {
+        } else if (val === 'true' || val === 'false') {
             //fix Boolean
             return val === 'true';
         } else if (!isNaN(+val)) {
