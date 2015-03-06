@@ -25,7 +25,7 @@ js -h
 
 ## how to use
 
-#### 指定本地的某个json文件
+#### 指定本地的某个 json 文件
 
 > 默认是 db.json
 
@@ -37,13 +37,13 @@ js a.json
 
 > 默认端口是 4000
 
-1、带着json文件名
+1、带着 json 文件名
 
 ```javascript
 js a.json -p 2000
 ```
 
-2、不带json文件名
+2、不带 json 文件名
 
 
 ```javascript
