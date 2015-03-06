@@ -1,6 +1,6 @@
 {
   "name": "yc-jserver",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "json server for yc",
   "main": "index.js",
   "bin": {

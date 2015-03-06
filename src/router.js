@@ -120,7 +120,7 @@ module.exports = function (source) {
     // PUT /:resource/:id
     // PATCH /:resource/:id
     function update (req, res, next) {
-        var id = req.params.id;
+        var id = +req.params.id;
         var resource = db(req.params.resource).update(id, req.body);
 
         //req.body
