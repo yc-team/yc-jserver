@@ -1,6 +1,12 @@
 # yc-jserver
 json server for yc
 
+## 简单
+
+> 1 + 1 远大于 2
+
+1 个全局命令 加一个本地的 json 文件就 等于一个数据服务
+
 ## feature
 
 * 使用最新的 Express 4.*
