@@ -54,6 +54,20 @@ js a.json -p 2000
 js -p 2000
 ```
 
+## Router
+
+全面支持常规请求
+
+```
+GET   /users
+GET   /users/1
+GET   /users?name=zhangyaochun
+GET   /users?_start=0&_end=1
+POST  /users
+PUT   /users/1
+PATCH /users/1
+DEL   /users/1
+```
 
 ## 注释：
 
