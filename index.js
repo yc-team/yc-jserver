@@ -6,22 +6,36 @@ var jsonServer = require('./src/index');
 var port = 4000;  //defalt port
 
 function server(data, filepath) {
-  var newServer = jsonServer.create();
 
-  if (filepath) {
-    var router = jsonServer.router(filepath);
-  } else {
-    var router = jsonServer.router(data);
-  }
+    console.log(
+      '\nWelcome brother, we give you ' + chalk.grey('a json server/\n')
+    )
 
-  newServer.use(router);
-  newServer.listen(port);
+    for (var prop in data) {
+      console.log(chalk.grey('  http://localhost:' + port + '/') + chalk.cyan(prop))
+    }
+
+    console.log(
+      '\nOpen your browser, and enter ' + chalk.grey('http://localhost:' + port + '/\n')
+    )
+
+
+    var newServer = jsonServer.create();
+
+    if (filepath) {
+      var router = jsonServer.router(filepath);
+    } else {
+      var router = jsonServer.router(data);
+    }
+
+    newServer.use(router);
+    newServer.listen(port);
 }
 
 
 module.exports = function (argv) {
 
-  program
+    program
       .version(version)
       .option('-p, --port', 'Set port if you want')
       .parse(argv);

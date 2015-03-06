@@ -19,6 +19,7 @@
     "cors": "2.5.3",
     "express": "4.12.2",
     "lowdb": "0.7.2",
+    "yc-db-json": "latest",
     "method-override": "2.3.1",
     "serve-static": "1.9.1",
     "underscore": "latest"

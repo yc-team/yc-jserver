@@ -2,6 +2,8 @@ var express = require('express');
 var _ = require('underscore');
 var low = require('lowdb');
 
+low.mixin(require('yc-db-json'))
+
 var utils = require('./utils')
 
 module.exports = function (source) {
@@ -90,7 +92,7 @@ module.exports = function (source) {
     function show(req, res, next) {
         //http://expressjs.com/api.html#req.params
         //TODO 目前不严重 id 是否合法
-        var id = req.params.id;
+        var id = +req.params.id;
         var resource = db(req.params.resource).get(id);
 
         if (resource) {
