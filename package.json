@@ -1,6 +1,6 @@
 {
   "name": "yc-jserver",
-  "version": "0.4.0",
+  "version": "0.4.5",
   "description": "json server for yc",
   "main": "index.js",
   "bin": {
@@ -23,7 +23,7 @@
     "yc-db-json": "latest",
     "method-override": "2.3.1",
     "serve-static": "1.9.1",
-    "underscore": "latest"
+    "underscore": "1.5.2"
   },
   "keywords": [
     "yc",

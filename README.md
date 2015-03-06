@@ -3,6 +3,7 @@ json server for yc
 
 ## feature
 
+* 使用最新的 Express 4.*
 * 默认开启 cors
 * 自定义端口号
 * 本身就是一个静态服务器，执行目录下如果有 public 文件夹，直接可以访问
