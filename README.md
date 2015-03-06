@@ -1,6 +1,12 @@
 # yc-jserver
 json server for yc
 
+## feature
+
+* 默认开启 cors
+* 本身就是一个静态服务器，执行目录下如果有public文件，直接可以访问
+* 目前支持本地的 json 文件，后续支持读取远程的 json 文件
+
 ## how to install
 
 should be install -g
