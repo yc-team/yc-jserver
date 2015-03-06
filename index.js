@@ -1,4 +1,5 @@
 var program = require('commander');
+var chalk = require('chalk');
 var version = require("./package.json").version;
 
 var jsonServer = require('./src/index');
