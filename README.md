@@ -12,5 +12,5 @@ sudo npm install yc-jserver -g
 ## how to get help
 
 ```javascript
-wd -h
+js -h
 ```
