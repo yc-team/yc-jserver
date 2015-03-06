@@ -138,9 +138,9 @@ module.exports = function (source) {
 
     // DELETE /:resource/:id
     function destory (req, res, next) {
-        var id = req.params.id;
-        db(req.params.res).remove(id);
-
+        var id = +req.params.id;
+        db(req.params.resource).remove(id);
+        res.status(204).end()
     }
 
 
