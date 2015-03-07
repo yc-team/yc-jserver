@@ -75,6 +75,30 @@ PATCH /users/1
 DEL   /users/1
 ```
 
+## 如何部署
+
+1. 部署一个本地的 RESTFul api 服务
+
+```javascript
+mkdir test
+cd test
+mkdir api
+touch db.json
+
+js db.json -p 8000
+```
+
+db.json 的内容可以是：
+
+```javascript
+{
+   "id": "80000000"
+   "name": "zhangyaochun",
+   "from": "wandoujia-fe"
+}
+```
+
+
 ## 注释：
 
 * request body size 做了最大限制：10mb
