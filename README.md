@@ -77,7 +77,7 @@ DEL   /users/1
 
 ## How to deploy
 
-1. 部署一个本地的 RESTFul api 服务
+1、部署一个本地的 RESTFul api 服务
 
 ```javascript
 mkdir test
@@ -98,7 +98,7 @@ db.json 的内容可以是：
 }
 ```
 
-2. 部署一个线上的 RESTFul api 服务
+2、 部署一个线上的 RESTFul api 服务
 
 其实差不多流程都类似，只是需要配置一些额外的，并且配合 pm2
 
