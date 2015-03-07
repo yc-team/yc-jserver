@@ -107,8 +107,6 @@ db.json 的内容可以是：
 
 * RESTFul api server
 * Mock server
-* JSON file system
-* Log server
 
 ## TODO
 
