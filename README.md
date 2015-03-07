@@ -7,7 +7,7 @@ json server for yc
 
 1 个全局命令 加一个本地的 json 文件就 等于一个数据服务
 
-## feature
+## Feature
 
 * 使用最新的 Express 4.*
 * 默认开启 cors
@@ -19,7 +19,7 @@ json server for yc
 * 本身就是一个静态服务器，执行目录下如果有 public 文件夹，直接可以访问
 * 目前支持本地的 json 文件，后续支持读取远程的 json 文件
 
-## how to install
+## How to install
 
 Should be install -g
 
@@ -27,13 +27,13 @@ Should be install -g
 sudo npm install yc-jserver -g
 ```
 
-## how to get help
+## How to get help
 
 ```javascript
 js -h
 ```
 
-## how to use
+## How to use
 
 #### 指定本地的某个 json 文件
 
@@ -75,7 +75,7 @@ PATCH /users/1
 DEL   /users/1
 ```
 
-## 如何部署
+## How to deploy
 
 1. 部署一个本地的 RESTFul api 服务
 
@@ -99,7 +99,7 @@ db.json 的内容可以是：
 ```
 
 
-## 注释：
+## Note：
 
 * request body size 做了最大限制：10mb
 * json 文件必须是合法的，不要包含任何注释内容，可以先去 [jsonlint.com](http://jsonlint.com/) lint 一下
