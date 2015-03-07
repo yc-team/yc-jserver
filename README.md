@@ -116,7 +116,7 @@ db.json 的内容可以是：
 * 打通 needle 来满足对 json 文件的读取和本地自动化上传
 
 
-## Note：
+## Note
 
 * request body size 做了最大限制：10mb
 * json 文件必须是合法的，不要包含任何注释内容，可以先去 [jsonlint.com](http://jsonlint.com/) lint 一下
