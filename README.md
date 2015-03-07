@@ -106,7 +106,6 @@ db.json 的内容可以是：
 ## Where to use?
 
 * RESTFul api server
-* Mock server
 
 ## TODO
 
