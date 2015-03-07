@@ -108,12 +108,14 @@ db.json 的内容可以是：
 * RESTFul api server
 * Mock server
 * JSON file system
+* Log server
 
 ## TODO
 
 * 需要加一个定时备份的脚本，定期把这些文件备份一遍
 * 可以接入 sso-node-sdk 来增加 api 的权限控制
 * 打通 needle 来满足对 json 文件的读取和本地自动化上传
+* 自动写入一些时间维度的值方便统计
 
 
 ## Note
