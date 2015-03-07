@@ -1,5 +1,5 @@
 # yc-jserver
-json server for yc
+
 
 ## Simple and Powerful
 
