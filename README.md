@@ -103,6 +103,18 @@ db.json 的内容可以是：
 其实差不多流程都类似，只是需要配置一些额外的，并且配合 pm2
 
 
+## Where to use?
+
+* RESTFul api server
+* Mock server
+* JSON file system
+
+## TODO
+
+* 需要加一个定时备份的脚本，定期把这些文件备份一遍
+* 可以接入 sso-node-sdk 来增加 api 的权限控制
+
+
 ## Note：
 
 * request body size 做了最大限制：10mb
