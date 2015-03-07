@@ -1,7 +1,7 @@
 # yc-jserver
 json server for yc
 
-## 简单
+## Simple and Powerful
 
 > 1 + 1 远大于 2
 
@@ -21,7 +21,7 @@ json server for yc
 
 ## how to install
 
-should be install -g
+Should be install -g
 
 ```javascript
 sudo npm install yc-jserver -g
@@ -92,7 +92,7 @@ db.json 的内容可以是：
 
 ```javascript
 {
-   "id": "80000000"
+   "id": "80000000",
    "name": "zhangyaochun",
    "from": "wandoujia-fe"
 }
@@ -102,3 +102,4 @@ db.json 的内容可以是：
 ## 注释：
 
 * request body size 做了最大限制：10mb
+* json 文件必须是合法的，不要包含任何注释内容，可以先去 [jsonlint.com](http://jsonlint.com/) lint 一下
